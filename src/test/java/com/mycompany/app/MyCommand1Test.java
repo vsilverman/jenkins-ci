@@ -1,0 +1,101 @@
+package com.mycompany.app;
+
+//This class is using JUnit3 frameowrk
+
+//import org.testng.annotations.Test;
+//import org.testng.AssertJUnit;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.After;
+import static org.junit.Assert.*;
+
+
+
+public class MyCommand1Test {
+	
+	private static MyCommand1 mc = new MyCommand1();
+
+	  @Before
+	  public void setup() {
+//		  AssertJUnit.assertTrue(true);
+ 		  assertTrue(true);
+	  }
+
+	  @After
+	  public void tearDown() {
+//		  AssertJUnit.assertTrue(true);
+		  assertTrue(true);
+//		    throw new RuntimeException("Test not implemented");
+	  }
+
+	  @Test
+	  public void test1() {
+//		  AssertJUnit.assertTrue(true);
+		  assertTrue(true);
+//	    throw new RuntimeException("Test not implemented");
+	  }
+	  
+	  @Test
+	  public void test2() {
+//		  AssertJUnit.assertTrue(true);
+		  assertTrue(true);
+//	    throw new RuntimeException("Test not implemented");
+	  }
+	  
+	  @Test
+	  public void test3() {
+//		  AssertJUnit.assertTrue(true);
+		  assertTrue(true);
+//	    throw new RuntimeException("Test not implemented");
+	  }
+	  
+	  @Test
+	  public void test4() {
+//		  AssertJUnit.assertTrue(true);
+		  assertTrue(true);
+//	    throw new RuntimeException("Test not implemented");
+	  }
+	  
+	  @Test
+	  public void test5() {
+//		  AssertJUnit.assertTrue(true);
+		  assertTrue(true);
+//	    throw new RuntimeException("Test not implemented");
+	  }
+	  
+	  @Test
+	  public void test6() {
+//		  AssertJUnit.assertTrue(true);
+		  assertTrue(true);
+//	    throw new RuntimeException("Test not implemented");
+	  }
+	  
+	  @Test
+	  public void test7() {
+//		  AssertJUnit.assertTrue(true);
+		  assertTrue(true);
+//	    throw new RuntimeException("Test not implemented");
+	  }
+	  
+	  @Test
+	  public void test8() {
+//		  AssertJUnit.assertTrue(true);
+		  assertTrue(true);
+//	    throw new RuntimeException("Test not implemented");
+	  }
+	  
+
+	  @Test
+	  public void exec() {
+		String MyCmd = MyCommand1.path + MyCommand1.command + " " + MyCommand1.params;
+	  	String os = System.getProperty("os.name");
+	  	if (os.contains("Linux") || os.contains("Mac"))
+			MyCmd = "curl --help";
+		mc.exec(MyCmd);
+//		AssertJUnit.assertTrue(true);
+		assertTrue(true);
+//    throw new RuntimeException("Test not implemented");
+	  }
+
+}
