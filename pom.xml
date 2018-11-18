@@ -17,11 +17,11 @@
       <artifactId>selenium-java</artifactId>
       <version>3.11.0</version>
     </dependency>
-    <dependency>
+    <!-- dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-chrome-driver</artifactId>
       <version>3.11.0</version>
-    </dependency>
+    </dependency -->
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
