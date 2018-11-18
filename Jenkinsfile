@@ -11,11 +11,6 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-        stage('Prepare Tests') {
-            steps {
-                sh 'docker cp ~/bin/chromedriver my-jenkins-ci:/home/jenkins-ci/'
-            }
-        }
         stage('Test') {
             steps {
                 sh 'mvn test'
