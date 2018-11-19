@@ -32,10 +32,12 @@ public class JenkinsDemoLoginTest {
 
     @Before
     public void setUp() throws Exception {
-        System.setProperty("webdriver.chrome.driver", "/home/jenkins-ci/chromedriver-linux");
+//        System.setProperty("webdriver.chrome.driver", "/home/jenkins-ci/chromedriver-linux");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
 //        driver = new FirefoxDriver();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.get(baseUrl);
     }
 
