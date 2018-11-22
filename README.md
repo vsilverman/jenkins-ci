@@ -11,7 +11,7 @@ This repo shows how to use docker, jenkins and maven to build, test and deploy j
 
             ./dkr-jenkinsci-start.sh
             
--   After container starts get Jenkins admin password from another terminal window
+-   After container starts get Jenkins admin password from another terminal window:
 
             docker cp jenkins-tutorials:/var/jenkins_home/secrets/initialAdminPassword .
             cat initialAdminPassword
@@ -19,6 +19,11 @@ This repo shows how to use docker, jenkins and maven to build, test and deploy j
 -   Point your browser to https://localhost:8080 and unlock Jenkins by entering
     obtained admin password.  After that create a new admin user with demo/demo
     (login_name/password) credentials.
+    
+-   Now you can build and test a Java app, which will demo automatic authentication
+    with newly created Jenkins account. To do this simply run the following command:
+    
+            mvn clean package
     
 -   Create a new Pipeline job in Jenkins.  Configure this Pipeline by entering under 
     "Repository URL" : "/home/jenkins-ci/" and under "Script Path" : "Jenkinsfile".
