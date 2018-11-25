@@ -41,6 +41,13 @@
       <version>4.0.0</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <!-- info.cukes is the same as cucumber.io -->
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-jvm-deps</artifactId>
+      <version>1.0.5</version>
+      <scope>test</scope>
+    </dependency>
       <!-- In case of using testNG uncomment the following dependency -->
       <!-- dependency>
           <groupId>org.testng</groupId>
@@ -71,6 +78,11 @@
             </manifest>
           </archive>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.4</version>
       </plugin>
     </plugins>
   </build>

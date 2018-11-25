@@ -20,6 +20,7 @@ import org.openqa.selenium.support.ui.Select;
  * domain using existing jenkins demo account.
  * After login into jenkins with demo credentials it tests
  * validity of those values by verifying UI authentication.
+ * To perform testing this demo is using JUnit framework.
  *
  * @version 1.0
  * @author  Vlad
