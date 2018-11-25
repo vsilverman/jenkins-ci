@@ -13,7 +13,7 @@ This repo shows how to use docker, jenkins and maven to build, test and deploy j
             
 -   After container starts get Jenkins admin password from another terminal window:
 
-            docker cp jenkins-tutorials:/var/jenkins_home/secrets/initialAdminPassword .
+            docker cp my-jenkins-ci:/var/jenkins_home/secrets/initialAdminPassword .
             cat initialAdminPassword
 
 -   Point your browser to https://localhost:8080 and unlock Jenkins by entering
