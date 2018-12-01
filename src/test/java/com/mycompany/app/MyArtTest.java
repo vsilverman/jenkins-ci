@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 public class MyArtTest {
 	
-	private static MyArt ma = new MyArt();
+//  private static MyArt ma = new MyArt();
 	
   @Before
   public void setup() {

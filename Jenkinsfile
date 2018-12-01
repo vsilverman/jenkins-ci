@@ -21,7 +21,7 @@ pipeline {
                 }
             }
         }
-        stage('Publish for development') {
+        stage('Publish for dev') {
             when {
                 branch 'development'
             }
