@@ -7,7 +7,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 class JenkinsDemoLogin(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome("chromedriver")
+        self.driver = webdriver.Chrome("./chromedriver")
         self.driver.implicitly_wait(30)
         self.base_url = "https://www.katalon.com/"
         self.verificationErrors = []
