@@ -8,7 +8,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'python -m py_compile pysrc/JenkinsDemoLoginTest.py'
+                sh 'python -m py_compile jenkins/pysrc/JenkinsDemoLoginTest.py'
             }
         }
         stage('Test') {
