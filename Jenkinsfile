@@ -12,6 +12,16 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
+        stage('Build Python app') {
+            agent {
+                docker {
+                    image 'python:2-alpine'
+                }
+            }
+            steps {
+                sh 'python -m py_compile jenkins/pysrc/JenkinsDemoLoginTest.py'
+            }
+        }
         stage('Test') {
             agent {
                 docker {
@@ -25,6 +35,23 @@ pipeline {
             post {
                 always {
                     junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
+        stage('Test Python app') {
+            agent {
+                docker {
+                    image 'qnib/pytest'
+                }
+            }
+            steps {
+                sh 'pip install selenium'
+                sh 'get-chrome-driver.sh'
+                sh 'py.test --verbose --junit-xml test-reports/results.xml jenkins/pysrc/JenkinsDemoLoginTest.py'
+            }
+            post {
+                always {
+                    junit 'test-reports/results.xml'
                 }
             }
         }

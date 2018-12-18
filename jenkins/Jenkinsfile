@@ -11,7 +11,7 @@ pipeline {
                 sh 'python -m py_compile jenkins/pysrc/JenkinsDemoLoginTest.py'
             }
         }
-        stage('Test') {
+        stage('Test Python app') {
             agent {
                 docker {
                     image 'qnib/pytest'
