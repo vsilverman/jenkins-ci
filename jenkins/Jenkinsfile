@@ -18,7 +18,8 @@ pipeline {
                 }
             }
             steps {
-                    sh 'py.test --verbose --junit-xml test-reports/results.xml jenkins/pysrc/JenkinsDemoLoginTest.py'
+                sh 'pip install selenium'
+                sh 'py.test --verbose --junit-xml test-reports/results.xml jenkins/pysrc/JenkinsDemoLoginTest.py'
             }
             post {
                 always {
