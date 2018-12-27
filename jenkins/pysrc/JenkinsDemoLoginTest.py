@@ -1,14 +1,23 @@
 # -*- coding: utf-8 -*-
 import unittest
 from selenium import webdriver
+# import selenium.webdriver.chrome.service as service
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import NoSuchElementException
 
 
 class JenkinsDemoLogin(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome("/var/jenkins_home/workspace/Jenkins-BlueOcean/chromedriver")
+        # self.driver = webdriver.Chrome("/var/jenkins_home/workspace/Jenkins-BlueOcean/chromedriver")
+        # passing above parameter inside webdriver.Chrome() is optional
+        self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(30)
+
+        # service = service.Service('./chromedriver')
+        # service.start()
+        # capabilities = {'chrome.binary': '/path/to/custom/chrome'}
+        # driver = webdriver.Remote(service.service_url, capabilities)
+
         self.base_url = "https://www.katalon.com/"
         self.verificationErrors = []
         self.accept_next_alert = True
