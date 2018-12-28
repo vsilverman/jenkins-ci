@@ -9,6 +9,15 @@ import os
 import random
 
 
+def create_file(fname):
+	out_file = open(fname, "w")
+	txt = "This is joke #"
+	for nmb in range(1, 51):
+		line = txt + str(nmb)
+		out_file.write(line + "\n")
+	out_file.close()
+
+
 def get_random_joke():
 	"""
 	This function prints a single
@@ -21,10 +30,10 @@ def get_random_joke():
 		JokeOfTheDay.get_random_joke()
 	"""
 	filename = "jokes.txt"
-	# check if file exists
+	# create file if it doesn't exist
 	if not os.path.exists(filename):
-		print("file " + filename + " does not exist")
-		quit()
+		print("file " + filename + " does not exist, creating it...")
+		create_file(filename)
 	# read file into list of lines
 	text_file = open(filename, "r")
 	lines = text_file.readlines()
