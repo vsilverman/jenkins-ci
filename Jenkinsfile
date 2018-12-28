@@ -19,7 +19,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'python -m py_compile jenkins/pysrc/JenkinsDemoLoginTest.py'
+                // sh 'python -m py_compile jenkins/pysrc/JenkinsDemoLoginTest.py'
+                sh 'python -m py_compile jenkins/pysrc/*.py'
             }
         }
         stage('Test') {
@@ -45,8 +46,9 @@ pipeline {
                 }
             }
             steps {
-                sh 'pip install --upgrade pip && pip install selenium'
+                // sh 'pip install --upgrade pip && pip install selenium'
                 // sh 'py.test --verbose --junit-xml test-reports/results.xml jenkins/pysrc/JenkinsDemoLoginTest.py'
+                sh 'py.test --verbose --junit-xml test-reports/results.xml jenkins/pysrc/JokeOfTheDayTest.py'
             }
             post {
                 always {

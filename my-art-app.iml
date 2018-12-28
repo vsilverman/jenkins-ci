@@ -54,6 +54,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:cucumber-junit:4.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: info.cukes:cucumber-jvm-deps:1.0.5" level="project" />
-    <orderEntry type="library" name="Python 3.7 (python-tests) interpreter library" level="application" />
+    <orderEntry type="library" name="Python 2.7 interpreter library" level="application" />
   </component>
 </module>
