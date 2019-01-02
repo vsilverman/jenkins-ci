@@ -1,7 +1,7 @@
 pipeline {
     agent none
     stages {
-        stage('Build') {
+        stage('Build Java app') {
             agent {
                 docker {
                     image 'maven:3-alpine'
@@ -19,11 +19,11 @@ pipeline {
                 }
             }
             steps {
-                // sh 'python -m py_compile jenkins/pysrc/JenkinsDemoLoginTest.py'
+                echo "compiling all source files"
                 sh 'python -m py_compile jenkins/pysrc/*.py'
             }
         }
-        stage('Test') {
+        stage('Test Java app') {
             agent {
                 docker {
                     image 'maven:3-alpine'
