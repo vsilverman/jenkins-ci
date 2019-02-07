@@ -1,5 +1,5 @@
 # Demo of Continuous Integration
-This repo shows how to use docker, jenkins and maven to build, test and deploy java app
+This repo shows how to use dockerized jenkins to build, test and deploy java and python apps. For testing java app this demo is using maven and python app is tested with pytest.
 
 ## Steps to Execute This Demo
 
