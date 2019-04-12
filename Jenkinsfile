@@ -57,12 +57,19 @@ pipeline {
             }
         }
         stage('Publish for dev') {
+            agent {
+                docker {
+                    image 'maven:3-alpine'
+                    args '-v /root/.m2:/root/.m2'
+                }
+            }
             when {
                 branch 'development'
             }
             steps {
                 // sh 'npm install'
                 //  sh './jenkins/scripts/deliver.sh'
+                sh './mvn-sonar-run.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 //  sh './jenkins/scripts/kill.sh'
             }
