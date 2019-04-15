@@ -32,4 +32,9 @@ This repo shows how to use dockerized jenkins to build, test and deploy java and
 -   While a pipeline job is running click on "Open Blue Ocean" link and verify that
     all tests are passed and that current build of the app is ready for demonstration.
     
-   
+-   After executing this demo you can test entire project against running instance
+    of Jenkins.  For executing such tests inside e.g. InteliJ IDE doe the following:
+    - import IntelliJ settings of this project
+    - right click on test->java->com.mycompany.app
+    - select 'Run all tests'. Tests will be executed using JUnit and Cucumber frameworks.
+    - observe results and duration of every test.
