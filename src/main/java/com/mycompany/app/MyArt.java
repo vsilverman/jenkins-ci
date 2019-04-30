@@ -17,7 +17,6 @@ public class MyArt {
 	
 	private static MyProperties myProps = new MyProperties();
 	private static MyCommand1 mc = new MyCommand1();
-//	private static String dirName = null;
 	private static String dirName = "d:\\Flash1\\SVA\\R\\V\\2016";
 	private static String cmdName = "call-from-java.cmd";
 	
