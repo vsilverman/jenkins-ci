@@ -40,9 +40,11 @@ This repo shows how to use dockerized jenkins to build, test and deploy java and
     - observe results and duration of every test.
     
 -   To simplify execution of this demo and visualize entire process you may follow 
-    a more detailed overview document, located at 
-    https://github.com/vsilverman/jenkins-ci/wiki/Jenkins-Continuos-Integration
+    a more detailed overview document, located at this
+    [Continuous Integration Page][https://github.com/vsilverman/jenkins-ci/wiki/Jenkins-Continuos-Integration]
     
 -   Remember that described above process and documentation may be always used as a template.
     In case you need to meet certain goals integrate current framework with proper data
     pipeline or piece of software, build new app and rerun the entire demo.
+
+[https://github.com/vsilverman/jenkins-ci/wiki/Jenkins-Continuos-Integration]: https://github.com/vsilverman/jenkins-ci/wiki/Jenkins-Continuos-Integration
