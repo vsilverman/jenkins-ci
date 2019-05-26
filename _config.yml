@@ -1,5 +1,5 @@
-title: Example of Continuous Integration
-description: This site provides example of continuous integration and shows how to use docker, jenkins and maven to build, test and deploy java app
+#title: Example of Continuous Integration
+#description: This site provides example of continuous integration and shows how to use docker, jenkins and maven to build, test and deploy java app
 show_downloads: true
 #theme: jekyll-theme-merlot
 #theme: jekyll-theme-time-machine
