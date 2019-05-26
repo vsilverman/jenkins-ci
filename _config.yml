@@ -1,5 +1,5 @@
 title: Continuous Integration
-description: This site provides example of continuous integration. To execute it - simply download or clone
+description: This site provides example of continuous integration.  To execute it - simply download or clone
   all sources from https://github.com/vsilverman/jenkins-ci and follow below instructions.
 show_downloads: true
 theme: jekyll-theme-cayman
