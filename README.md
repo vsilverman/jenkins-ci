@@ -5,7 +5,7 @@ This repo shows how to use dockerized jenkins to build, test and deploy java and
 
 -	Clone this sample by using e.g. the following command:
 
-			git clone <git-address-of-this-repo>
+            git clone <git-address-of-this-repo>
 
 -   Run the referenced docker image from the terminal window:
 
@@ -33,7 +33,7 @@ This repo shows how to use dockerized jenkins to build, test and deploy java and
     all tests are passed and that current build of the app is ready for demonstration.
     
 -   After executing this demo you can test entire project against running instance
-    of Jenkins.  For executing such tests inside e.g. InteliJ IDE doe the following:
+    of Jenkins.  For executing such tests inside e.g. InteliJ IDE do the following:
     - import IntelliJ settings of this project
     - right click on test->java->com.mycompany.app
     - select 'Run all tests'. Tests will be executed using JUnit and Cucumber frameworks.
