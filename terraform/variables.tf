@@ -1,0 +1,5 @@
+region = "us-west-2"
+shared_credentials_file = "/path/to/credentials/file" 
+profile = "terraform"
+key_name = "mykp-us-west-2"
+my_ami = "ami-027386b91d3c0bf78"
