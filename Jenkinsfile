@@ -19,7 +19,7 @@ pipeline {
                 }
             }
             steps {
-                echo "compiling all source files"
+                echo "compiling all python source files"
                 sh 'python -m py_compile jenkins/pysrc/*.py'
             }
         }
