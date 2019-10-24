@@ -1,6 +1,7 @@
 #!/bin/bash
 
 docker run \
+  -d \
   --rm \
   --name my-jenkins-ci \
   -u root \
