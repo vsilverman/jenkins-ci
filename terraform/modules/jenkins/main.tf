@@ -24,7 +24,7 @@ https://www.terraform.io/docs/providers/aws/r/instance.html
 # Configuration for a "jenkins" instance
 resource "aws_instance" "jenkins" {
   ami = "ami-ba602bc2"
- # instance_type = "m4.large"
+# instance_type = "m4.large"
   instance_type = "t2.micro"
   key_name        = "${var.keypair_name}"
   tags = {
