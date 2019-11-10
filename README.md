@@ -7,10 +7,20 @@ This repo shows how to use dockerized jenkins to build, test and deploy java and
 
             git clone <git-address-of-this-repo>
 
--   Run the referenced docker image from the terminal window:
+-	Build your own ubuntu based docker image and install on it all needed components,
+    including java, jenkins, etc.:
+
+            docker build -t <image-you-are-building> .
+
+-   Advantage of above approach - you have full control of what
+    to include in your newly built image. You need to remember though to install 
+    jenkins blue ocean plugins, required for this demo.
+
+-   Alternative approach is to use the pre-built docker image with already 
+    installed jenkins blue-ocean plugins. For doing this run from the terminal window:
 
             ./dkr-jenkinsci-start.sh
-            
+
 -   After container starts get Jenkins admin password from another terminal window:
 
             docker cp my-jenkins-ci:/var/jenkins_home/secrets/initialAdminPassword .

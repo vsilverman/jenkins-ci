@@ -9,6 +9,7 @@ Ensure this keypair is added to your local SSH agent so provisioners can
 connect.
 Example: ~/.ssh/terraform.pub
 DESCRIPTION
+  default = "~/.ssh/terraform_rsa.pub"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -17,6 +18,7 @@ DESCRIPTION
 # ---------------------------------------------------------------------------------------------------------------------
 variable "key_name" {
   description = "Desired name of AWS key pair"
+  default = "~/.ssh/terraform_rsa"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
