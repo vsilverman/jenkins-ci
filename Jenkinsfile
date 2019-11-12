@@ -82,6 +82,7 @@ pipeline {
                 }
             }
             steps {
+                echo "localy installing and running the java app"
                 sh './jenkins/scripts/deliver.sh'
             }
         }
