@@ -9,6 +9,7 @@ pipeline {
                 }
             }
             steps {
+                echo "cleaning and packaging java app"
                 sh 'mvn -B -DskipTests clean package'
             }
         }
