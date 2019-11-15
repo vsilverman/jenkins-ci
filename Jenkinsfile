@@ -83,7 +83,7 @@ pipeline {
                 }
             }
             steps {
-                echo "localy installing and running the java app"
+                echo "localy  installing and running the java app"
                 sh './scripts/deliver.sh'
             }
         }
