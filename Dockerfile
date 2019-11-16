@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 # vs--- sudo is not installed by default for ubuntu:16 
 RUN apt-get update && apt-get install -y sudo && rm -rf /var/lib/apt/lists/*
-RUN apt-get update && apt-get install -y wget git curl
+RUN apt-get update && apt-get install -y wget curl git
 RUN apt-get update && apt-get install -y openjdk-8-jdk
 RUN apt-get update && apt-get install -y maven ant ruby rbenv make
 # vs--- https is not installed by default for ubuntu:16
