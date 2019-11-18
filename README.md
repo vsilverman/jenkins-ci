@@ -53,8 +53,21 @@ This repo shows how to use dockerized jenkins to build, test and deploy java and
     a more detailed overview document, located at this
     [Continuous Integration Page][https://github.com/vsilverman/jenkins-ci/wiki/Jenkins-Continuos-Integration]
     
--   Remember that described above process and documentation may be always used as a template.
-    In case you need to meet certain goals integrate current framework with proper data
-    pipeline or piece of software, build new app and rerun the entire demo.
+-   Above demo shows example of building customized docker images 
+    and including those in multi-platform CI/CD proces using descriptive 
+    Jenkins pipeline. In case you need to include in the pipeline 
+    deployment process for the built image - follow current project 
+    instructions on using terraform for 
+    [building deployment infrastructure](https://github.com/vsilverman/jenkins-ci/tree/master/terraform).
+    And in case you need to build DevOps and Test environment 
+    using other infrastructure-as-a-code tools - you may follow 
+    [Insight project instructions](https://github.com/vsilverman/insight)
+     
+
+-   Remember that described above process and documentation may be always 
+    used as a template. In case you need to meet certain other 
+    goals - just integrate current framework with proper data
+    pipeline or piece of software, build new app and rerun the 
+    entire demo.
 
 [https://github.com/vsilverman/jenkins-ci/wiki/Jenkins-Continuos-Integration]: https://github.com/vsilverman/jenkins-ci/wiki/Jenkins-Continuos-Integration
