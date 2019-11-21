@@ -88,6 +88,15 @@ pipeline {
                 sh './scripts/deliver.sh'
             }
         }
+        stage('Release') {
+        input {
+                message "Approve this release?"
+                ok "Approve it!"
+              }
+              steps {
+                echo "Release is approved"
+              }
+        }
         stage('Demo') {
             when {
               expression {
