@@ -24,6 +24,15 @@ pipeline {
                 sh 'python -m py_compile jenkins/pysrc/*.py'
             }
         }
+        stage('Build Docker image') {
+            agent {
+                dockerfile true
+            }
+            steps {
+                echo "building image from Dockerfile"
+                sh 'echo JENKINS_HOME = $JENKINS_HOME'
+            }
+        }
         stage('Test Java app') {
             agent {
                 docker {
