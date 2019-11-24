@@ -1,6 +1,15 @@
 pipeline {
     agent none
     stages {
+        stage('Build Docker image') {
+            agent {
+                dockerfile true
+            }
+            steps {
+                echo "building image from Dockerfile"
+                sh 'echo JENKINS_HOME = $JENKINS_HOME'
+            }
+        }
         stage('Build Java app') {
             agent {
                 docker {
@@ -22,15 +31,6 @@ pipeline {
             steps {
                 echo "compiling all python source files"
                 sh 'python -m py_compile jenkins/pysrc/*.py'
-            }
-        }
-        stage('Build Docker image') {
-            agent {
-                dockerfile true
-            }
-            steps {
-                echo "building image from Dockerfile"
-                sh 'echo JENKINS_HOME = $JENKINS_HOME'
             }
         }
         stage('Test Java app') {
