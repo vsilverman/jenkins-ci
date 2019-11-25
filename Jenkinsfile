@@ -86,15 +86,27 @@ pipeline {
             }
         }
         stage('Deliver') {
-            agent {
-                docker {
-                    image 'maven:3-alpine'
-                    args '-v /root/.m2:/root/.m2'
+            parallel {
+                stage('Deliver On Linux') {
+                    agent {
+                        docker {
+                            image 'maven:3-alpine'
+                            args '-v /root/.m2:/root/.m2'
+                        }
+                    }
+                    steps {
+                        echo "localy  installing and running the java app"
+                        sh './scripts/deliver.sh'
+                    }
                 }
-            }
-            steps {
-                echo "localy  installing and running the java app"
-                sh './scripts/deliver.sh'
+                stage('Deliver On Windows') {
+                    agent {
+                        label "windows"
+                    }
+                    steps {
+                        bat "./scripts/deliver.bat"
+                    }
+                }
             }
         }
         stage('Release') {
