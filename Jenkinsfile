@@ -100,12 +100,11 @@ pipeline {
                     }
                 }
                 stage('Deliver On Windows') {
-                    agent {
+                    // agent {
                     //    label "windows"
-                        none
-                    }
+                    // }
                     steps {
-                        echo "Template for Delivery on Windows platform"
+                        echo "Template for parallel Delivery on Windows platform"
                     //    bat "./scripts/deliver.bat"
                     }
                 }
