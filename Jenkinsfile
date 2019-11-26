@@ -101,11 +101,12 @@ pipeline {
                 }
                 stage('Deliver On Windows') {
                     agent {
-                        label "windows"
+                    //    label "windows"
+                        none
                     }
                     steps {
-                        echo "Deliver on Windows platform"
-                        bat "./scripts/deliver.bat"
+                        echo "Template for Delivery on Windows platform"
+                    //    bat "./scripts/deliver.bat"
                     }
                 }
             }
