@@ -104,6 +104,7 @@ pipeline {
                         label "windows"
                     }
                     steps {
+                        echo "Deliver on Windows platform"
                         bat "./scripts/deliver.bat"
                     }
                 }
