@@ -6,7 +6,7 @@ pipeline {
                 dockerfile true
             }
             steps {
-                echo "building image from Dockerfile"
+                echo "building  image from Dockerfile"
                 sh 'echo JENKINS_HOME = $JENKINS_HOME'
             }
         }
