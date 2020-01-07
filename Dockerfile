@@ -15,6 +15,9 @@ ADD init.groovy /tmp/WEB-INF/init.groovy
 RUN apt-get install -y zip && cd /tmp && zip -g /usr/share/jenkins/jenkins.war WEB-INF/init.groovy
 USER jenkins
 
+# vs--- MAINTAINER instruction is deprecated in latest docker releases and is covered by LABEL
+LABEL maintainer="vsilverman@gmail.com"
+
 # VOLUME /var/jenkins_home - bind this in via -v if you want to make this persistent.
 ENV JENKINS_HOME /var/jenkins_home
 
