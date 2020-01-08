@@ -1,3 +1,9 @@
+# vs--- Every time this Dockerfile is modifies and is pushed into GitHub
+# vs--- a new dockec image will be built and pushed into docker hub:
+# vs--- https://hub.docker.com/repository/docker/vsilverman/testrepo
+# vs--- Such automatic build of a new docker image is triggered by
+# vs--- specifying Webhooks under GitHub settings
+
 FROM ubuntu:16.04
 
 # vs--- sudo is not installed by default for ubuntu:16 
