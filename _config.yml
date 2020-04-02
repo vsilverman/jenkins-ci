@@ -1,6 +1,6 @@
 title: Continuous Integration
 description: "This site provides example of continuous integration.  To execute it - simply download or clone all sources from https://github.com/vsilverman/jenkins-ci and follow below instructions."
-avatar: "https://www.mabl.com/hubfs/CICDBlog.png"
+og_image: "https://www.mabl.com/hubfs/CICDBlog.png"
 show_downloads: true
 # theme: jekyll-theme-cayman
 theme: jekyll-theme-merlot
