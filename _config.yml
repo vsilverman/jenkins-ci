@@ -3,6 +3,7 @@ name: Vlad Silverman
 description: "This site provides example of continuous integration.  To execute it - simply download or clone all sources from https://github.com/vsilverman/jenkins-ci and follow below instructions."
 email: vsilverman@gmail.com
 
+
 # -----------------------------------------------------------------------------
 # Open Graph
 # -----------------------------------------------------------------------------
