@@ -84,7 +84,7 @@ pipeline {
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
             }
         }
-        stage('Publish for prod') {
+        stage('Publish  for prod') {
             agent {
                 docker {
                     image 'maven:3-alpine'
