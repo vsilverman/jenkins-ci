@@ -75,14 +75,13 @@ pipeline {
                 }
             }
             when {
-                branch 'development'
+                branch 'dev'
             }
             steps {
                 // sh 'npm install'
-                //  sh './jenkins/scripts/deliver.sh'
+                // sh './scripts/deliver.sh'
                 sh './mvn-sonar-run.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                //  sh './jenkins/scripts/kill.sh'
             }
         }
         stage('Deliver') {
