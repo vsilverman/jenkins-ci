@@ -84,6 +84,23 @@ pipeline {
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
             }
         }
+        stage('Publish for prod') {
+            agent {
+                docker {
+                    image 'maven:3-alpine'
+                    args '-v /root/.m2:/root/.m2'
+                }
+            }
+            when {
+                branch 'prod'
+            }
+            steps {
+                // sh 'npm install'
+                // sh './scripts/deliver.sh'
+                sh './mvn-sonar-run.sh'
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+            }
+        }
         stage('Deliver') {
             parallel {
                 stage('Deliver On Linux') {
