@@ -42,6 +42,7 @@ pipeline {
             }
             steps {
                 sh 'mvn test'
+                stash includes: '**/target/', name: 'app'
             }
             post {
                 always {
@@ -95,6 +96,7 @@ pipeline {
                         }
                     }
                     steps {
+                        unstash 'app'
                         echo "localy  installing and running the java app"
                         sh './scripts/deliver.sh'
                     }
