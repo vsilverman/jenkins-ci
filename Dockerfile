@@ -1,3 +1,9 @@
+# vs--- Every time this Dockerfile is modified and is pushed into GitHub
+# vs--- a new docker image will be built and pushed into docker hub:
+# vs--- https://hub.docker.com/repository/docker/vsilverman/testrepo
+# vs--- Such automatic build of a new docker image is triggered by
+# vs--- specifying Webhooks under GitHub settings
+
 FROM ubuntu:16.04
 
 # vs--- sudo is not installed by default for ubuntu:16 
@@ -14,6 +20,9 @@ RUN mkdir -p /var/jenkins_home && chown -R jenkins /var/jenkins_home
 ADD init.groovy /tmp/WEB-INF/init.groovy
 RUN apt-get install -y zip && cd /tmp && zip -g /usr/share/jenkins/jenkins.war WEB-INF/init.groovy
 USER jenkins
+
+# vs--- MAINTAINER instruction is deprecated in latest docker releases and is covered by LABEL
+LABEL maintainer="vsilverman@gmail.com"
 
 # VOLUME /var/jenkins_home - bind this in via -v if you want to make this persistent.
 ENV JENKINS_HOME /var/jenkins_home

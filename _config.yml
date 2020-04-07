@@ -1,7 +1,34 @@
 title: Continuous Integration
-description: This site provides example of continuous integration.  To execute it - simply download or clone
-  all sources from https://github.com/vsilverman/jenkins-ci and follow below instructions.
+name: Vlad Silverman
+description: "This site provides example of continuous integration.  To execute it - simply download or clone all sources from https://github.com/vsilverman/jenkins-ci and follow below instructions."
+email: vsilverman@gmail.com
+
+
+# -----------------------------------------------------------------------------
+# Open Graph
+# -----------------------------------------------------------------------------
+# Display links to the page with a preview object on social media.
+# To achieve this, change serve_og_meta to true and then provide the URL of the
+# preview image as the value of og_image.
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+# og_image: # The site-wide (default for all links) Open Graph preview image
+og_image: "https://www.mabl.com/hubfs/CICDBlog.png"
+
+# -----------------------------------------------------------------------------
+# Social integration
+# -----------------------------------------------------------------------------
+github_username: vsilverman
+# twitter_username: # your Twitter handle
+linkedin_username: vladsilverman
+#scholar_userid: # your Google Scholar ID
+#orcid_id: # your ORCID ID
+medium_username: vsilverman
+#quora_username: # your Quora username
+#publons_id: # your ID on Publons
+#research_gate_profile: # your profile on ResearchGate
+#blogger_url: # your blogger URL
+
 show_downloads: true
-theme: jekyll-theme-cayman
-#theme: jekyll-theme-merlot
-#theme: jekyll-theme-time-machine
+# theme: jekyll-theme-cayman
+# theme: jekyll-theme-merlot
+theme: jekyll-theme-time-machine
