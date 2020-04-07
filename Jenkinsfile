@@ -80,10 +80,10 @@ pipeline {
             }
             steps {
                 // sh 'npm install'
-                // sh './scripts/deliver.sh'
                 unstash 'app'
                 sh './my-mvn-sonar-run.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                echo 'You may see all issues at https://sonarcloud.io/projects'
+                // input message: 'Finished using the web site? (Click "Proceed" to continue)'
             }
         }
         stage('Publish  for prod') {
@@ -98,10 +98,8 @@ pipeline {
             }
             steps {
                 // sh 'npm install'
-                // unstash 'app'
                 sh 'printenv'
                 input message: 'Approve Prod Environment? (Click "Proceed" to continue)'
-                // mail to: vsilverman@gmail.com, subject: 'Prod environment approved'
             }
         }
         stage('Deliver') {
