@@ -1,5 +1,10 @@
 pipeline {
     agent none
+
+    triggers {
+        cron('@daily')
+    }
+
     stages {
         stage('Build Docker image') {
             agent {
@@ -76,14 +81,30 @@ pipeline {
                 }
             }
             when {
-                branch 'development'
+                branch 'dev'
             }
             steps {
                 // sh 'npm install'
-                //  sh './jenkins/scripts/deliver.sh'
-                sh './mvn-sonar-run.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                //  sh './jenkins/scripts/kill.sh'
+                unstash 'app'
+                sh './my-mvn-sonar-run.sh'
+                echo 'You may see all issues at https://sonarcloud.io/projects'
+                // input message: 'Finished using the web site? (Click "Proceed" to continue)'
+            }
+        }
+        stage('Review prod environment') {
+            agent {
+                docker {
+                    image 'maven:3-alpine'
+                    args '-v /root/.m2:/root/.m2'
+                }
+            }
+            when {
+                branch 'prod'
+            }
+            steps {
+                // sh 'npm install'
+                sh 'printenv'
+                input message: 'Approve Prod Environment? \n (Click "Proceed" to continue)'
             }
         }
         stage('Deliver') {
@@ -111,15 +132,6 @@ pipeline {
                     }
                 }
             }
-        }
-        stage('Release') {
-        input {
-                message "Approve this release?"
-                ok "Approve it!"
-              }
-              steps {
-                echo "Release is approved"
-              }
         }
         stage('Demo') {
             when {
