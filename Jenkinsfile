@@ -1,5 +1,10 @@
 pipeline {
     agent none
+
+    triggers {
+        cron('@daily')
+    }
+
     stages {
         stage('Build Docker image') {
             agent {
