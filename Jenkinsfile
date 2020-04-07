@@ -101,7 +101,7 @@ pipeline {
                 // unstash 'app'
                 sh 'printenv'
                 input message: 'Approve Prod Environment? (Click "Proceed" to continue)'
-                mail to: vsilverman@gmail.com, subject: 'Prod environment approved'
+                // mail to: vsilverman@gmail.com, subject: 'Prod environment approved'
             }
         }
         stage('Deliver') {
