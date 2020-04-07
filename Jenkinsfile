@@ -42,7 +42,7 @@ pipeline {
             }
             steps {
                 sh 'mvn test'
-                stash includes: '**/target/*.jar', name: 'app'
+                stash includes: '**/target/', name: 'app'
             }
             post {
                 always {
