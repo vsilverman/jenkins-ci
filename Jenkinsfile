@@ -86,7 +86,7 @@ pipeline {
                 // input message: 'Finished using the web site? (Click "Proceed" to continue)'
             }
         }
-        stage('Publish  for prod') {
+        stage('Review prod environment') {
             agent {
                 docker {
                     image 'maven:3-alpine'
@@ -99,7 +99,7 @@ pipeline {
             steps {
                 // sh 'npm install'
                 sh 'printenv'
-                input message: 'Approve Prod Environment? (Click "Proceed" to continue)'
+                input message: 'Approve Prod Environment? \n (Click "Proceed" to continue)'
             }
         }
         stage('Deliver') {
@@ -128,8 +128,11 @@ pipeline {
                 }
             }
         }
-        stage('Release') {
-        input {
+        stage('Prod Release') {
+            when {
+                branch 'prod'
+            }
+            input {
                 message "Approve this release?"
                 ok "Approve it!"
               }
