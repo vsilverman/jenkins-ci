@@ -42,6 +42,7 @@ pipeline {
             }
             steps {
                 sh 'mvn test'
+                stash includes: '**/target/*.jar', name: 'app'
             }
             post {
                 always {
@@ -80,7 +81,8 @@ pipeline {
             steps {
                 // sh 'npm install'
                 // sh './scripts/deliver.sh'
-                sh './mvn-sonar-run.sh'
+                unstash 'app'
+                sh './my-mvn-sonar-run.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
             }
         }
@@ -97,7 +99,8 @@ pipeline {
             steps {
                 // sh 'npm install'
                 // sh './scripts/deliver.sh'
-                sh './mvn-sonar-run.sh'
+                unstash 'app'
+                sh './my-mvn-sonar-run.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
             }
         }
@@ -111,6 +114,7 @@ pipeline {
                         }
                     }
                     steps {
+                        unstash 'app'
                         echo "localy  installing and running the java app"
                         sh './scripts/deliver.sh'
                     }
