@@ -149,9 +149,7 @@ pipeline {
                     }
                 }
                 stage('Deploy docker pkg') {
-                    agent {
-                        any
-                    }
+                    agent any
                     steps {
                         echo "Deploying docker pkg"
                         sh './scripts/dkr-deploy.sh vsilverman jenkinsci/blueocean jenbo latest'
