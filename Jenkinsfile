@@ -145,7 +145,7 @@ pipeline {
                     steps {
                         unstash 'app'
                         echo "Deploying maven pkg"
-                        // sh './scripts/mvn-deploy.sh'
+                        sh './scripts/mvn-deploy.sh vsilverman'
                     }
                 }
                 stage('Deploy docker pkg') {
