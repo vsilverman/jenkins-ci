@@ -133,6 +133,30 @@ pipeline {
                 }
             }
         }
+        stage('Deploy') {
+            parallel {
+                stage('Deploy Maven pkg') {
+                    agent {
+                        docker {
+                            image 'maven:3-alpine'
+                            args '-v /root/.m2:/root/.m2'
+                        }
+                    }
+                    steps {
+                        unstash 'app'
+                        echo "Deploying maven pkg"
+                        // sh './scripts/mvn-deploy.sh vsilverman'
+                    }
+                }
+                stage('Deploy docker pkg') {
+                    agent any
+                    steps {
+                        echo "Deploying docker pkg"
+                        sh './scripts/dkr-deploy.sh vsilverman jenkinsci/blueocean jenbo latest'
+                    }
+                }
+            }
+        }
         stage('Demo') {
             when {
               expression {
