@@ -5,6 +5,7 @@
 # -----------------------------------------------------------------
 
 echo $HOME
+ls -al ~
 
 mvn sonar:sonar \
     -Dsonar.host.url=https://sonarcloud.io \
