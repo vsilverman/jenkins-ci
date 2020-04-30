@@ -4,6 +4,8 @@
 # This script enables continuous analysis of the quality of the app
 # -----------------------------------------------------------------
 
+echo $HOME
+
 mvn sonar:sonar \
     -Dsonar.host.url=https://sonarcloud.io \
     -Dsonar.projectKey=vsilverman_jenkins-ci \
