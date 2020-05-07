@@ -86,7 +86,7 @@ pipeline {
             steps {
                 // sh 'npm install'
                 unstash 'app'
-                sh './my-mvn-sonar-run.sh'
+                // sh './my-mvn-sonar-run.sh'
                 echo 'You may see all issues at https://sonarcloud.io/projects'
                 // input message: 'Finished using the web site? (Click "Proceed" to continue)'
             }
