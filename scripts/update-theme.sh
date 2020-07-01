@@ -19,6 +19,9 @@ fi
 rm ${cfg_file}
 mv ${cfg_file}.bak ${cfg_file}
 
+git config --global user.email "vsilverman@gmail.com"
+git config --global user.name "vsilverman"
+
 git add ${cfg_file}
 git commit -a -m "${msg}"
 git push
