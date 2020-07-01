@@ -24,4 +24,4 @@ git config --global user.name "vsilverman"
 
 git add ${cfg_file}
 git commit -a -m "${msg}"
-git push
+git push origin HEAD:master
