@@ -17,6 +17,7 @@ if [ $((10#${cur_date}%2)) -eq 0 ];
 fi
 rm ${cfg_file}
 mv ${cfg_file}.bak ${cfg_file}
+
 git add ${cfg_file}
 git commit -a -m "${msg}"
 git push
