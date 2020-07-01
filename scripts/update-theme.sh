@@ -3,7 +3,8 @@
 cfg_file=_config.yml
 msg="updated theme config"
 
-cur_date=$(date +%d)
+cur_date=`date +%d`
+# cur_date=$(date +%d)
 echo $((10#${cur_date}%2))
 if [ $((10#${cur_date}%2)) -eq 0 ];
     then

@@ -30,8 +30,8 @@ medium_username: vsilverman
 
 show_downloads: true
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-time-machine
 # --- good choices ---
-# theme: jekyll-theme---cayman
+# theme: jekyll-theme---time-machine
 # theme: jekyll-theme---merlot
 # theme: jekyll-theme---time---machine
