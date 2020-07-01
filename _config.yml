@@ -29,6 +29,9 @@ medium_username: vsilverman
 #blogger_url: # your blogger URL
 
 show_downloads: true
-# theme: jekyll-theme-cayman
-# theme: jekyll-theme-merlot
+
 theme: jekyll-theme-cayman
+# --- good choices ---
+# theme: jekyll-theme---cayman
+# theme: jekyll-theme---merlot
+# theme: jekyll-theme---time---machine

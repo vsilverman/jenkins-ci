@@ -77,7 +77,7 @@ pipeline {
             agent {
                 docker {
                     image 'maven:3-alpine'
-                    args '-v /root/.m2:/root/.m2'
+                    args '-v /root/:/root/'
                 }
             }
             when {
@@ -86,7 +86,7 @@ pipeline {
             steps {
                 // sh 'npm install'
                 unstash 'app'
-                sh './my-mvn-sonar-run.sh'
+                // sh './my-mvn-sonar-run.sh'
                 echo 'You may see all issues at https://sonarcloud.io/projects'
                 // input message: 'Finished using the web site? (Click "Proceed" to continue)'
             }
@@ -168,4 +168,5 @@ pipeline {
             }
         }
     }
+    
 }
