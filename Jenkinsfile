@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage('Build Docker image') {
+        stage('Build the Docker image') {
             agent {
                 dockerfile true
             }
