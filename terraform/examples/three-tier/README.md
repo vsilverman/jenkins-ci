@@ -4,7 +4,7 @@ This repo provides a template for running a three-tier architecture on Amazon
 Web services. 
 
 The targeted three-tier architecture is shown below:
-![Targeted three-tier architecture](https://user-images.githubusercontent.com/2159948/126373819-44ecc8ab-ee49-4f72-9908-76d487c33bb9.png)
+![Targeted three-tier architecture](https://raw.githubusercontent.com/vsilverman/jenkins-ci/master/terraform/examples/three-tier/docs/images/3-tier.png)
 
 Current terraform template addresses the following tasks:
 
