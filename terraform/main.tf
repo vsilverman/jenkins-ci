@@ -9,9 +9,9 @@ variable "key_name" {}
 variable "my_ami" {}
 
 provider "aws" {
-  region ="${var.region}"
-  shared_credentials_file ="${var.shared_credentials_file}" 
-  profile                 ="${var.profile}"
+  region = "${var.region}"
+  shared_credentials_file = "${var.shared_credentials_file}" 
+  profile                 = "${var.profile}"
 }
 
 resource "aws_instance" "web" {
