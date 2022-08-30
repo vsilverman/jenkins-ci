@@ -1,9 +1,3 @@
-# vs--- Every time this Dockerfile is modified and is pushed into GitHub
-# vs--- a new docker image will be built and pushed into docker hub:
-# vs--- https://hub.docker.com/repository/docker/vsilverman/testrepo
-# vs--- Such automatic build of a new docker image is triggered by
-# vs--- specifying Webhooks under GitHub settings
-
 FROM jenkins/jenkins:2.346.3-jdk11
 USER root
 RUN apt-get update && apt-get install -y lsb-release
