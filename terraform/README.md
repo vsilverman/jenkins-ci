@@ -10,10 +10,11 @@ accidentally charged for using those services.
 1. Install [Terraform](https://www.terraform.io/).
 2. Create AWS credentials file and insert there your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 3. `cd` into this folder.
-4. Run `terraform init`.
-5. Run `terraform apply`.
-6. After it's done deploying, it will output file with URLs and IPs you can try out.
-7. To clean up and delete all resources after you're done, run `terraform destroy`.
+4. Update main.tf and variables.tf with valid paths to your credential files
+5. Run `terraform init`.
+6. Run `terraform apply`.
+7. After it's done deploying, it will output file with URLs and IPs you can try out.
+8. To clean up and delete all resources after you're done, run `terraform destroy`.
 
 ## Customized examples
 
