@@ -1,4 +1,4 @@
-# Deployment to Azure with Terraform
+# Deployment to Azure cloud with Terraform
 
 ## Quick start
 
@@ -9,24 +9,14 @@ accidentally charged for using those services.
 
 Deploying a multi-tier web application to Azure with Terraform involves several steps. Here's a high-level overview of the process:
 
-Define the infrastructure in Terraform: First, you need to define the infrastructure that will support your web application in Terraform. This includes creating resource groups, virtual networks, subnets, security groups, load balancers, and other resources that are required to support your application.
-
-Define the application architecture: Once you have defined the infrastructure, you need to define the architecture of your web application. This includes defining the different tiers of your application (e.g., web server, application server, database server) and their associated resources.
-
-Write Terraform code: With the infrastructure and application architecture defined, you can write the Terraform code that will provision and configure the resources. This involves creating Terraform modules for each tier of your application and using them to create the necessary resources.
-
-Test and deploy: After writing the Terraform code, you need to test it to ensure that everything is working as expected. Once you are satisfied with the code, you can deploy it to Azure.
-
-Here are the detailed steps to deploy a multi-tier web application to Azure with Terraform:
-
 1. Set up an Azure account and create a service principal
 To use Terraform with Azure, you need to have an Azure account and create a service principal. The service principal is an identity that Terraform will use to authenticate with Azure and provision resources on your behalf.
 
 2. Define the infrastructure in Terraform
-In this step, you define the Azure resources that your application will require in a Terraform file. This can include resource groups, virtual networks, subnets, security groups, load balancers, and other resources that are required to support your application.
+In this step, you define the Azure resources that your application will require in a Terraform file. This can include resource groups, virtual networks, subnets, security groups, storage containers, and other resources that are required to support your application.
 
 3. Define the application architecture
-Once you have defined the infrastructure, you need to define the architecture of your web application. This includes defining the different tiers of your application (e.g., web server, application server, database server) and their associated resources.
+Once you have defined the infrastructure, you need to define the architecture of your web application. This includes defining the different tiers of your application (e.g., web server, middleware logic, database server) and their associated resources.
 
 4. Write Terraform code
 With the infrastructure and application architecture defined, you can write the Terraform code that will provision and configure the resources. This involves creating Terraform modules for each tier of your application and using them to create the necessary resources.
