@@ -17,5 +17,5 @@ is managed by the devops engineer, running this example.
 After you run `terraform plan` and `terraform apply` on this configuration, it will
 output the public url of deployed web server. Point your browser to this url
 and verify that the web server is running. After that you can run `test-deploy.sh`.
-It will redeploy the web server by changing the incoming port number and test
-a new deployment.
+This script will redeploy the web server by changing the incoming port number. After
+that it shows how to provide both manual and automated testing of a new deployment.
