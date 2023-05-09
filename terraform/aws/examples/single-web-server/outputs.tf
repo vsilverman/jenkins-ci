@@ -4,6 +4,6 @@ output "public_ip" {
 }
 
 output "url" {
-  value = "http://${aws_instance.example.public_ip}:8080"
+  value = "http://${aws_instance.example.public_ip}:${var.server_port}"
   description = "URL of the web server"
 }

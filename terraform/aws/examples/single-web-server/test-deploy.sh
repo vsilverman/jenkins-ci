@@ -22,14 +22,18 @@
 new_server_port=8090
 terraform apply -var "server_port=$new_server_port"
 
-# construct new url, based on assigned IP address and a new server port
-ip=$(terraform output public_ip)
-url="http://$ip:$new_server_port"
+# get the new url, based on created output variable
+url=$(terraform output url)
 
+echo "*** Waiting for the web server to be up and running ..."
+sleep 60
+
+echo "*** Initially perform manual testing ..."
 # wait for the actions from the end user
 read -p "Point your browser to $url, wait for your server to respond, then press any key to continue testing ..."
 
-# continue with automated test and save output results
+echo "*** Continue with automated testing ..."
+# save output results
 out_res=$(curl $url)
 
 # find if expected text is part of web output
