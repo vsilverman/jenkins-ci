@@ -34,7 +34,7 @@ echo "*** Initially perform manual testing ..."
 read -p "Point your browser to $url, wait for your server to respond, then press any key to continue testing ..."
 
 echo "*** Continue with automated testing ..."
-# Note1: below is the fix of "using `terraform output` in curl command" issue
+# below is the fix of the issue, described at https://github.com/vsilverman/jenkins-ci/issues/12
 url_length=${#url}
 let last_index=$url_length-2
 good_url=${url:1:$last_index}
