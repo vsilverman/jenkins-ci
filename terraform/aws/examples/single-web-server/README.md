@@ -16,6 +16,15 @@ is managed by the devops engineer, running this example.
 
 After you run `terraform plan` and `terraform apply` on this configuration, it will
 output the public url of deployed web server. Point your browser to this url
-and verify that the web server is running. After that you can run `test-deploy.sh`.
-This script will redeploy the web server by changing the incoming port number. After
-that it shows how to provide both manual and automated testing of a new deployment.
+and verify that the web server is running. After that you can run `test-deploy.sh`
+and see how terraform will deploy changes in configuration.
+
+Aletrnatevely you don't even need to manually run terraform commands, since all of
+required terraform commands are already included inside `test-deploy.sh` script.
+This script will deploy the web server by passing the incoming port number as a
+parameter to terraform-based configuration. After finshing the deployment this script
+also shows how to provide both manual and automated testing of a new web server.
+
+It would be useful to note that Latest editions of above script provide fixing of the
+[Testing deployment with curl tool](https://github.com/vsilverman/jenkins-ci/issues/12)
+issue.
