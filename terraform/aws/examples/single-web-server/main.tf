@@ -29,15 +29,17 @@ resource "aws_instance" "example" {
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.instance.id]
 
+  # Ubuntu comes with pre-installed python
   user_data = <<-EOF
               #!/bin/bash
               echo "<h1>Created by Terraform</h1>" > index.html
               echo "<h2>Maintained by Vlad S.</h2>" >> index.html
-              nohup busybox httpd -f -p "${var.server_port}" &
+              # nohup busybox httpd -f -p "${var.server_port}" &
+              python3 -m http.server "${var.server_port}" &
               EOF
 
   tags = {
-    Name = "terraform-example"
+    Name = "terraform-examples"
   }
 }
 
@@ -46,7 +48,7 @@ resource "aws_instance" "example" {
 # ---------------------------------------------------------------------------------------------------------------------
 
 resource "aws_security_group" "instance" {
-  name = "terraform-example-instance"
+  name = "terraform-examples-instance"
 
   # Inbound HTTP from anywhere
   ingress {
